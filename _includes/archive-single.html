@@ -71,7 +71,7 @@
           {% if post.codeurl %} | {% endif %}
         {% endif %}
         {% if post.codeurl %}
-          <a href="{{ post.codeurl }}">GitHub</a>
+          <a href="{{ post.codeurl }}">GitHub{% if post.code_status %} ({{ post.code_status }}){% endif %}</a>
         {% endif %}
       </p>
     {% endif %}
