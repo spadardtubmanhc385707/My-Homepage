@@ -57,7 +57,7 @@ layout: default
             {%- if page.paperurl -%}{% unless first %} | {% endunless %}<a href="{{ page.paperurl }}">Download Paper</a>{% assign first = false %}{%- endif -%}
             {%- if page.slidesurl -%}{% unless first %} | {% endunless %}<a href="{{ page.slidesurl }}">Download Slides</a>{% assign first = false %}{%- endif -%}
             {%- if page.bibtexurl -%}{% unless first %} | {% endunless %}<a href="{{ page.bibtexurl }}">Download Bibtex</a>{% assign first = false %}{%- endif -%}
-            {%- if page.codeurl -%}{% unless first %} | {% endunless %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener">Code (GitHub)</a>{% assign first = false %}{%- endif -%}
+            {%- if page.codeurl -%}{% unless first %} | {% endunless %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener">Code{% if page.code_status %} ({{ page.code_status }}){% endif %}</a>{% assign first = false %}{%- endif -%}
           </p>
         {%- elsif has_any_link -%}
           <p style="font-size: smaller">
@@ -65,7 +65,7 @@ layout: default
             {%- if page.paperurl -%}{% unless first %} | {% endunless %}<a href="{{ page.paperurl }}">Download Paper</a>{% assign first = false %}{%- endif -%}
             {%- if page.slidesurl -%}{% unless first %} | {% endunless %}<a href="{{ page.slidesurl }}">Download Slides</a>{% assign first = false %}{%- endif -%}
             {%- if page.bibtexurl -%}{% unless first %} | {% endunless %}<a href="{{ page.bibtexurl }}">Download Bibtex</a>{% assign first = false %}{%- endif -%}
-            {%- if page.codeurl -%}{% unless first %} | {% endunless %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener">Code (GitHub)</a>{% assign first = false %}{%- endif -%}
+            {%- if page.codeurl -%}{% unless first %} | {% endunless %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener">Code{% if page.code_status %} ({{ page.code_status }}){% endif %}</a>{% assign first = false %}{%- endif -%}
           </p>
         {%- endif -%}
 
